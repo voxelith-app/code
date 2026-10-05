@@ -176,7 +176,11 @@
 
 	--color-gradient-button-bg: linear-gradient(180deg, #f8f9fa 0%, #dce0e6 100%);
 
-	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, var(--color-cyan-500) 100%);
+	--loading-bar-gradient: linear-gradient(
+		to right,
+		var(--color-brand) 0%,
+		var(--color-cyan-500) 100%
+	);
 
 	--splash-tint-top: rgba(185, 240, 255, 0.465);
 	--splash-tint-bottom: rgba(230, 250, 255, 0.563);
@@ -321,7 +325,6 @@ html {
 	--color-cyan-950: #053845;
 	--color-cyan: var(--color-cyan-400);
 
-
 	--color-purple-50: #faf5ff;
 	--color-purple-100: #f4e7ff;
 	--color-purple-200: #ead4ff;
@@ -405,7 +408,11 @@ html {
 
 	--shadow-card: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
 
-	--brand-gradient-bg: linear-gradient(0deg, rgba(11, 26, 34, 0.2) 0%, rgba(20, 200, 236, 0.1) 100%);
+	--brand-gradient-bg: linear-gradient(
+		0deg,
+		rgba(11, 26, 34, 0.2) 0%,
+		rgba(20, 200, 236, 0.1) 100%
+	);
 	--brand-gradient-strong-bg: linear-gradient(270deg, #08131a 10%, var(--color-brand-bg-dark) 100%);
 	--brand-gradient-button: rgba(255, 255, 255, 0.08);
 	--brand-gradient-border: rgba(61, 224, 255, 0.08);
@@ -416,7 +423,11 @@ html {
 
 	--color-gradient-button-bg: linear-gradient(180deg, #3a3d47 0%, #33363d 100%);
 
-	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, var(--color-cyan-500) 100%);
+	--loading-bar-gradient: linear-gradient(
+		to right,
+		var(--color-brand) 0%,
+		var(--color-cyan-500) 100%
+	);
 
 	--splash-tint-top: rgba(20, 200, 236, 0.2);
 	--splash-tint-bottom: rgba(17, 35, 43, 0.5);
