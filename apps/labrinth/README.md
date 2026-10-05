@@ -1,4 +1,3 @@
-![labrinth banner](/.github/assets/api_cover.png)
 
 ## Modrinth's laboratory for its backend service & API!
 

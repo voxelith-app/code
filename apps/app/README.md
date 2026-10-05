@@ -1,29 +1,17 @@
-# ![Modrinth App](/.github/assets/app_cover.png)
+# Voxelith (app)
 
-## Modrinth App
+App desktop do Voxelith, feito com [Tauri](https://tauri.app/) e [Vue](https://vuejs.org/). A interface fica em `apps/app-frontend` e a parte do launcher em `packages/app-lib`.
 
-The Modrinth App is a desktop application for managing your Minecraft mods. It is built with [Tauri](https://tauri.app/) and [Vue](https://vuejs.org/).
+## Como rodar
 
-If you're not a developer and you've stumbled upon this repository, you can download the latest release of the app from the [Modrinth website](https://modrinth.com/app).
+Precisa ter o [Node.js](https://nodejs.org/), o [pnpm](https://pnpm.io/), o [Rust](https://www.rust-lang.org/tools/install) e os [pré-requisitos do Tauri](https://v2.tauri.app/start/prerequisites/).
 
-## Development
-
-### Pre-requisites
-
-Before you begin, ensure you have the following installed on your machine:
-
-- [Node.js](https://nodejs.org/en/)
-- [pnpm](https://pnpm.io/)
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Tauri](https://v2.tauri.app/start/prerequisites/)
-
-### Setup
-
-Follow these steps to set up your development environment:
+Na raiz do repositório:
 
 ```bash
+cp packages/app-lib/.env.prod packages/app-lib/.env
 pnpm install
 pnpm app:dev
 ```
 
-You should now have a development build of the app running with hot-reloading enabled. Any changes you make to the code will automatically refresh the app.
+O app abre em modo de desenvolvimento e recarrega sozinho quando o código muda.
