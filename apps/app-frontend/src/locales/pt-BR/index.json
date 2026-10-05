@@ -165,7 +165,7 @@
     "message": "Ocultar nametag"
   },
   "app.appearance-settings.minimize-launcher.description": {
-    "message": "Minimiza o Modrinth App ao iniciar o Minecraft."
+    "message": "Minimiza o Voxelith ao iniciar o Minecraft."
   },
   "app.appearance-settings.minimize-launcher.title": {
     "message": "Minimizar aplicativo"
@@ -205,6 +205,12 @@
   },
   "app.behavior-settings.content.title": {
     "message": "Início e conteúdo"
+  },
+  "app.behavior-settings.refocus-on-game-close.description": {
+    "message": "Traz o Voxelith para a frente quando o Minecraft fecha."
+  },
+  "app.behavior-settings.refocus-on-game-close.title": {
+    "message": "Voltar para o app quando o Minecraft fechar"
   },
   "app.behavior-settings.startup-and-navigation.title": {
     "message": "Inicialização e navegação"
@@ -301,6 +307,9 @@
   },
   "app.download-manager.attention": {
     "message": "Requer atenção"
+  },
+  "app.download-manager.bulk-update-content": {
+    "message": "Atualizando {count, plural, one {# item} other {# itens}}"
   },
   "app.download-manager.cancel": {
     "message": "Cancelar instalação"
@@ -1617,7 +1626,7 @@
     "message": "Mais antigo"
   },
   "app.settings.app-version": {
-    "message": "Modrinth App {version}"
+    "message": "Voxelith {version}"
   },
   "app.settings.default-instance-options.environment-variables.description": {
     "message": "As variáveis do ambiente definidas ao iniciar uma instância."
@@ -2730,7 +2739,7 @@
     "message": "Anúncios tornam o Modrinth possível e financiam os pagamentos dos criadores. Nossos parceiros talvez armazenem ou acessem os cookies no aplicativo para personalizar anúncios e medir o desempenho. Você pode recusar ou gerenciar suas preferências abaixo."
   },
   "app.settings.privacy.discord-rich-presence.description": {
-    "message": "Exibe o Modrinth App como sua atividade atual no Discord. Isso não afeta a Presença Rica adicionada às instâncias por mods. Exige a reinicialização do aplicativo."
+    "message": "Exibe o Voxelith como sua atividade atual no Discord. Isso não afeta a Presença Rica adicionada às instâncias por mods. Exige a reinicialização do aplicativo."
   },
   "app.settings.privacy.discord-rich-presence.title": {
     "message": "Presença Rica do Discord"
@@ -2775,7 +2784,7 @@
     "message": "Buscar por um diretório de aplicativo"
   },
   "app.settings.resource-management.app-directory.description": {
-    "message": "Onde o Modrinth App armazena as instâncias e outros arquivos. As mudanças serão aplicadas após reiniciar o aplicativo."
+    "message": "Onde o Voxelith armazena as instâncias e outros arquivos. As mudanças serão aplicadas após reiniciar o aplicativo."
   },
   "app.settings.resource-management.app-directory.select": {
     "message": "Selecione um novo diretório de aplicativo"
@@ -3239,6 +3248,12 @@
   "app.skins.section.default-skins": {
     "message": "Skins padrões"
   },
+  "app.skins.section.dungeons-hero": {
+    "message": "Herói de Dungeons"
+  },
+  "app.skins.section.dungeons-ii-hero": {
+    "message": "Herói de Dungeons II"
+  },
   "app.skins.section.minecon-earth-2017": {
     "message": "MINECON Earth 2017"
   },
@@ -3268,6 +3283,9 @@
   },
   "app.skins.section.tiny-takeover": {
     "message": "Tiny Takeover"
+  },
+  "app.skins.section.wilderness-bound": {
+    "message": "Wilderness Bound"
   },
   "app.skins.sign-in.button": {
     "message": "Conecte-se à Microsoft"
@@ -3426,13 +3444,13 @@
     "message": "Pacotes de recursos sincronizados"
   },
   "app.update-popup.body.download-complete": {
-    "message": "O Modrinth App v{version} já foi instalado. Recarregue para atualizar agora ou ela será feita automaticamente ao fechar o Modrinth App."
+    "message": "O Voxelith v{version} já foi instalado. Recarregue para atualizar agora ou ela será feita automaticamente ao fechar o Voxelith."
   },
   "app.update-popup.body.linux": {
-    "message": "O Modrinth App v{version} está disponível. Use o gerenciador de pacotes para atualizar para obter novos recursos e correções!"
+    "message": "O Voxelith v{version} está disponível. Use o gerenciador de pacotes para atualizar para obter novos recursos e correções!"
   },
   "app.update-popup.body.metered": {
-    "message": "O Modrinth App v{version} já está disponível! Já que sua rede é limitada, não a instalamos automaticamente."
+    "message": "O Voxelith v{version} já está disponível! Já que sua rede é limitada, não a instalamos automaticamente."
   },
   "app.update-popup.changelog": {
     "message": "Mudanças"

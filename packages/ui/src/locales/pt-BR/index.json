@@ -722,6 +722,12 @@
   "content.page-layout.failed-to-load": {
     "defaultMessage": "Falha ao carregar o conteúdo"
   },
+  "content.page-layout.failed-to-load-changelog": {
+    "defaultMessage": "Não foi possível carregar o changelog"
+  },
+  "content.page-layout.failed-to-load-updates": {
+    "defaultMessage": "Não foi possível carregar as atualizações disponíveis"
+  },
   "content.page-layout.filter.add": {
     "defaultMessage": "Filtros"
   },
@@ -1282,6 +1288,9 @@
   },
   "external-files.permissions-card.last-updated": {
     "defaultMessage": "Última atualização em {date} por {user}"
+  },
+  "external-files.permissions-card.license.all-rights": {
+    "defaultMessage": "Todos os direitos reservados/Sem licença"
   },
   "external-files.permissions-card.license.unknown": {
     "defaultMessage": "Desconhecido"
@@ -5934,7 +5943,7 @@
     "defaultMessage": "Resultados da busca"
   },
   "settings.language.coverage.app-tooltip": {
-    "defaultMessage": "Cerca de {percentage}% do Modrinth App está disponível neste idioma."
+    "defaultMessage": "Cerca de {percentage}% do Voxelith está disponível neste idioma."
   },
   "settings.language.coverage.label": {
     "defaultMessage": "{percentage}% suportado"
@@ -6797,6 +6806,78 @@
   "unknown-file-warning-modal.unrecognized-files": {
     "defaultMessage": "Arquivos não reconhecidos"
   },
+  "update-all-modal.changelog-for": {
+    "defaultMessage": "Changelog de {project}"
+  },
+  "update-all-modal.changelog-loaded": {
+    "defaultMessage": "Changelog carregado."
+  },
+  "update-all-modal.close-changelog": {
+    "defaultMessage": "Fechar changelog"
+  },
+  "update-all-modal.current-version": {
+    "defaultMessage": "Versão atual"
+  },
+  "update-all-modal.empty": {
+    "defaultMessage": "Nenhuma atualização disponível."
+  },
+  "update-all-modal.header": {
+    "defaultMessage": "Atualizar projetos"
+  },
+  "update-all-modal.loading": {
+    "defaultMessage": "Carregando atualizações…"
+  },
+  "update-all-modal.loading-changelog": {
+    "defaultMessage": "Carregando changelog…"
+  },
+  "update-all-modal.new-version": {
+    "defaultMessage": "Nova versão"
+  },
+  "update-all-modal.no-changelog": {
+    "defaultMessage": "Esta versão não tem changelog."
+  },
+  "update-all-modal.no-compatible-updates": {
+    "defaultMessage": "Nenhuma atualização compatível disponível."
+  },
+  "update-all-modal.no-version": {
+    "defaultMessage": "Sem atualizações compatíveis"
+  },
+  "update-all-modal.project": {
+    "defaultMessage": "Projeto"
+  },
+  "update-all-modal.project-list": {
+    "defaultMessage": "Atualizações de projetos"
+  },
+  "update-all-modal.results": {
+    "defaultMessage": "{count, plural, one {# projeto pronto para atualizar} other {# projetos prontos para atualizar}}"
+  },
+  "update-all-modal.select-all": {
+    "defaultMessage": "Selecionar todos os projetos"
+  },
+  "update-all-modal.select-project": {
+    "defaultMessage": "Selecionar {project} para atualizar"
+  },
+  "update-all-modal.select-version": {
+    "defaultMessage": "Nova versão de {project}"
+  },
+  "update-all-modal.update": {
+    "defaultMessage": "Atualizar {count, plural, one {# projeto} other {# projetos}}"
+  },
+  "update-all-modal.versions": {
+    "defaultMessage": "Versão atual / Nova versão"
+  },
+  "update-all-modal.view": {
+    "defaultMessage": "Ver"
+  },
+  "update-all-modal.view-changelog": {
+    "defaultMessage": "Ver changelog de {project}"
+  },
+  "update-all-modal.warning": {
+    "defaultMessage": "Não dá para garantir que as atualizações sejam seguras para os seus mundos. Leia os changelogs e pense em fazer um backup."
+  },
+  "update-all-modal.warning-server": {
+    "defaultMessage": "Não dá para garantir que as atualizações sejam seguras para o seu servidor. Leia os changelogs e pense em fazer um backup."
+  },
   "user.profile.badge.alpha.about.1": {
     "defaultMessage": "Este usuário está presente desde a versão alfa do Modrinth, que terminou em novembro de 2020."
   },
@@ -6990,4 +7071,3 @@
     "defaultMessage": "Tipo"
   }
 }
-

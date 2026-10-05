@@ -12,7 +12,8 @@ import IntlMessageFormat from 'intl-messageformat'
 import { LRUCache } from 'lru-cache'
 
 const debug = useDebugLogger('i18n')
-const DEFAULT_LOCALE = 'en-US'
+const DEFAULT_LOCALE = 'pt-BR'
+const FALLBACK_LOCALE = 'en-US'
 
 const frontendLocaleModules = import.meta.glob<{ default: CrowdinMessages }>(
 	'../locales/*/index.json',
@@ -152,7 +153,7 @@ export default defineNuxtPlugin({
 		function t(key: string, values?: Record<string, unknown>): string {
 			const currentLocale = locale.value
 			const localeMessages = messageCache.get(currentLocale)
-			const fallbackMessages = messageCache.get(DEFAULT_LOCALE)
+			const fallbackMessages = messageCache.get(FALLBACK_LOCALE)
 			const msg = localeMessages?.[key] ?? fallbackMessages?.[key]
 
 			if (!msg) {
@@ -172,7 +173,7 @@ export default defineNuxtPlugin({
 
 			const fallbackMsg = fallbackMessages?.[key]
 			if (fallbackMsg && fallbackMsg !== msg) {
-				return formatIcuMessage(fallbackMsg, DEFAULT_LOCALE, values) ?? fallbackMsg
+				return formatIcuMessage(fallbackMsg, FALLBACK_LOCALE, values) ?? fallbackMsg
 			}
 
 			return msg
@@ -225,8 +226,8 @@ export default defineNuxtPlugin({
 		debug('init: detected locale', { detectedLocale, cookieLocale, isServer: import.meta.server })
 
 		// Load locales (hits cache after first request)
-		await loadLocale(DEFAULT_LOCALE)
-		if (detectedLocale !== DEFAULT_LOCALE) await loadLocale(detectedLocale)
+		await loadLocale(FALLBACK_LOCALE)
+		if (detectedLocale !== FALLBACK_LOCALE) await loadLocale(detectedLocale)
 		locale.value = detectedLocale
 
 		debug('init: complete', { locale: locale.value })

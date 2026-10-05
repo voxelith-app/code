@@ -6051,7 +6051,7 @@
     "defaultMessage": "Search results"
   },
   "settings.language.coverage.app-tooltip": {
-    "defaultMessage": "About {percentage}% of the Modrinth App is available in this language."
+    "defaultMessage": "About {percentage}% of Voxelith is available in this language."
   },
   "settings.language.coverage.label": {
     "defaultMessage": "{percentage}% supported"
