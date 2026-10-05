@@ -59,6 +59,22 @@
 	--color-blue-950: #112340;
 	--color-blue: var(--color-blue-600);
 
+	--color-cyan-50: #e6faff;
+	--color-cyan-100: #ccf5ff;
+	--color-cyan-200: #a3edff;
+	--color-cyan-300: #6ee6ff;
+	--color-cyan-400: #3de0ff;
+	--color-cyan-500: #14c8ec;
+	--color-cyan-600: #00add2;
+	--color-cyan-700: #0098b8;
+	--color-cyan-800: #007d99;
+	--color-cyan-900: #0b5f72;
+	--color-cyan-950: #053845;
+	--color-cyan: var(--color-cyan-700);
+
+	--color-brand-bg-dark: #0b1a22;
+	--color-brand-bg-light: #e6faff;
+
 	--color-purple-50: #faf5ff;
 	--color-purple-100: #f2e7ff;
 	--color-purple-200: #e7d3ff;
@@ -119,10 +135,12 @@
 	--color-green-bg: rgba(0, 175, 92, 0.1);
 	--color-blue-bg: rgba(31, 104, 192, 0.1);
 	--color-purple-bg: rgba(142, 50, 243, 0.1);
+	--color-cyan-highlight: rgba(0, 152, 184, 0.25);
+	--color-cyan-bg: rgba(0, 152, 184, 0.1);
 
-	--color-brand: var(--color-green);
-	--color-brand-highlight: var(--color-green-highlight);
-	--color-brand-shadow: rgba(0, 175, 92, 0.7);
+	--color-brand: var(--color-cyan);
+	--color-brand-highlight: var(--color-cyan-highlight);
+	--color-brand-shadow: rgba(0, 152, 184, 0.7);
 
 	--shadow-inset-lg: inset 0px -2px 2px hsla(221, 39%, 91%, 0.1);
 	--shadow-inset: inset 0px -2px 2px hsla(221, 39%, 91%, 0.05);
@@ -141,28 +159,28 @@
 
 	--brand-gradient-bg: linear-gradient(
 		0deg,
-		rgba(68, 182, 138, 0.175) 0%,
-		rgba(58, 250, 112, 0.125) 100%
+		rgba(20, 200, 236, 0.175) 0%,
+		rgba(61, 224, 255, 0.125) 100%
 	);
 	--brand-gradient-strong-bg: linear-gradient(
 		270deg,
-		rgba(68, 182, 138, 0.175) 0%,
-		rgba(36, 225, 91, 0.12) 100%
+		rgba(20, 200, 236, 0.175) 0%,
+		rgba(61, 224, 255, 0.12) 100%
 	);
 	--brand-gradient-button: rgba(255, 255, 255, 0.5);
-	--brand-gradient-border: rgba(32, 64, 32, 0.15);
-	--brand-gradient-fade-out-color: linear-gradient(to bottom, rgba(213, 235, 224, 0), #d0ece0 70%);
+	--brand-gradient-border: rgba(0, 72, 88, 0.15);
+	--brand-gradient-fade-out-color: linear-gradient(to bottom, rgba(230, 250, 255, 0), #d5f4fb 70%);
 
 	--color-button-bg-selected: var(--color-brand);
 	--color-button-text-selected: var(--color-accent-contrast);
 
 	--color-gradient-button-bg: linear-gradient(180deg, #f8f9fa 0%, #dce0e6 100%);
 
-	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, #00af5c 100%);
+	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, var(--color-cyan-500) 100%);
 
-	--splash-tint-top: rgba(185, 255, 207, 0.465);
-	--splash-tint-bottom: rgba(183, 226, 255, 0.563);
-	--splash-overlay: rgba(181, 255, 213, 0.315);
+	--splash-tint-top: rgba(185, 240, 255, 0.465);
+	--splash-tint-bottom: rgba(230, 250, 255, 0.563);
+	--splash-overlay: rgba(181, 240, 255, 0.315);
 	--splash-cube-opacity: 0.4;
 	--splash-cube-blend: multiply;
 
@@ -213,9 +231,9 @@ html {
 	--color-ad-contrast: black;
 	--color-ad-highlight: var(--color-purple);
 
-	--color-link: var(--color-blue) !important;
-	--color-link-hover: var(--color-blue) !important; // DEPRECATED, use filters in future
-	--color-link-active: var(--color-blue) !important; // DEPRECATED, use filters in future
+	--color-link: var(--color-cyan-800) !important;
+	--color-link-hover: var(--color-cyan-800) !important; // DEPRECATED, use filters in future
+	--color-link-active: var(--color-cyan-800) !important; // DEPRECATED, use filters in future
 
 	--shadow-button: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15);
 
@@ -290,6 +308,20 @@ html {
 	--color-blue-950: #152356;
 	--color-blue: var(--color-blue-400);
 
+	--color-cyan-50: #e6faff;
+	--color-cyan-100: #ccf5ff;
+	--color-cyan-200: #a3edff;
+	--color-cyan-300: #6ee6ff;
+	--color-cyan-400: #3de0ff;
+	--color-cyan-500: #14c8ec;
+	--color-cyan-600: #00add2;
+	--color-cyan-700: #0098b8;
+	--color-cyan-800: #007d99;
+	--color-cyan-900: #0b5f72;
+	--color-cyan-950: #053845;
+	--color-cyan: var(--color-cyan-400);
+
+
 	--color-purple-50: #faf5ff;
 	--color-purple-100: #f4e7ff;
 	--color-purple-200: #ead4ff;
@@ -350,10 +382,16 @@ html {
 	--color-green-bg: rgba(27, 217, 106, 0.2);
 	--color-blue-bg: rgba(79, 156, 255, 0.2);
 	--color-purple-bg: rgba(199, 138, 255, 0.2);
+	--color-cyan-highlight: rgba(61, 224, 255, 0.25);
+	--color-cyan-bg: rgba(61, 224, 255, 0.2);
 
-	--color-brand: var(--color-green);
-	--color-brand-highlight: rgba(27, 217, 106, 0.25);
-	--color-brand-shadow: rgba(27, 217, 106, 0.7);
+	--color-brand: var(--color-cyan);
+	--color-brand-highlight: var(--color-cyan-highlight);
+	--color-brand-shadow: rgba(61, 224, 255, 0.7);
+
+	--color-link: var(--color-cyan) !important;
+	--color-link-hover: var(--color-cyan) !important;
+	--color-link-active: var(--color-cyan) !important;
 
 	--shadow-inset-lg: inset 0px -2px 2px hsla(221, 39%, 11%, 0.1);
 	--shadow-inset: inset 0px -2px 2px hsla(221, 39%, 11%, 0.05);
@@ -367,10 +405,10 @@ html {
 
 	--shadow-card: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
 
-	--brand-gradient-bg: linear-gradient(0deg, rgba(14, 35, 19, 0.2) 0%, rgba(55, 137, 73, 0.1) 100%);
-	--brand-gradient-strong-bg: linear-gradient(270deg, #09110d 10%, #131f17 100%);
+	--brand-gradient-bg: linear-gradient(0deg, rgba(11, 26, 34, 0.2) 0%, rgba(20, 200, 236, 0.1) 100%);
+	--brand-gradient-strong-bg: linear-gradient(270deg, #08131a 10%, var(--color-brand-bg-dark) 100%);
 	--brand-gradient-button: rgba(255, 255, 255, 0.08);
-	--brand-gradient-border: rgba(155, 255, 160, 0.08);
+	--brand-gradient-border: rgba(61, 224, 255, 0.08);
 	--brand-gradient-fade-out-color: linear-gradient(to bottom, rgba(24, 30, 31, 0), #171d1e 80%);
 
 	--color-button-bg-selected: var(--color-brand-highlight);
@@ -378,9 +416,9 @@ html {
 
 	--color-gradient-button-bg: linear-gradient(180deg, #3a3d47 0%, #33363d 100%);
 
-	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, #1ffa9a 100%);
+	--loading-bar-gradient: linear-gradient(to right, var(--color-brand) 0%, var(--color-cyan-500) 100%);
 
-	--splash-tint-top: rgba(66, 131, 92, 0.275);
+	--splash-tint-top: rgba(20, 200, 236, 0.2);
 	--splash-tint-bottom: rgba(17, 35, 43, 0.5);
 	--splash-overlay: rgba(22, 24, 28, 0.64);
 	--splash-cube-opacity: 0.8;
@@ -421,13 +459,13 @@ html {
 
 	--brand-gradient-bg: linear-gradient(
 		0deg,
-		rgba(22, 66, 51, 0.15) 0%,
-		rgba(55, 137, 73, 0.1) 100%
+		rgba(11, 26, 34, 0.15) 0%,
+		rgba(20, 200, 236, 0.1) 100%
 	);
 	--brand-gradient-strong-bg: linear-gradient(
 		270deg,
-		rgba(9, 18, 14, 0.6) 10%,
-		rgba(19, 31, 23, 0.5) 100%
+		rgba(8, 19, 26, 0.6) 10%,
+		rgba(11, 26, 34, 0.5) 100%
 	);
 
 	--color-gradient-button-bg: linear-gradient(180deg, #1b1b20 0%, #25262b 100%);
@@ -449,8 +487,8 @@ html {
 	--color-text-default: #c3c4b3;
 	--color-text-tertiary: #9b9e98;
 
-	--color-brand: #4d9227;
-	--color-brand-highlight: #25421e;
+	--color-brand: var(--color-cyan-700);
+	--color-brand-highlight: #0b3a45;
 	--color-accent-contrast: #ffffff;
 	--color-ad: var(--color-brand-highlight);
 	--color-ad-raised: var(--color-brand);
