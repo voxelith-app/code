@@ -1,39 +1,36 @@
-# ![Modrinth Monorepo Cover](/.github/assets/monorepo_cover.png)
+<p align="center">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset="branding/voxelith-logo.png" />
+		<img src="branding/voxelith-icon.png" alt="Voxelith" width="320" />
+	</picture>
+</p>
 
-![Issues](https://img.shields.io/github/issues-raw/Modrinth/code?color=c78aff&label=issues&style=for-the-badge)
-![Pull Requests](https://img.shields.io/github/issues-pr-raw/Modrinth/code?color=c78aff&label=PRs&style=for-the-badge)
-![Contributors](https://img.shields.io/github/contributors/Modrinth/code?color=c78aff&label=contributors&style=for-the-badge)
-![Lines of Code](https://img.shields.io/endpoint?url=https://loctopus.creeperkatze.dev/github/modrinth/code/badge?style=flat&logoColor=white&color=c78aff&style=for-the-badge)
-![Commit Activity](https://img.shields.io/github/commit-activity/m/Modrinth/code?color=c78aff&label=commits&style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/Modrinth/code?color=c78aff&label=last%20commit&style=for-the-badge)
+# Voxelith
 
-## Modrinth Monorepo
+Launcher de Minecraft leve para PC, feito para jogar com os amigos. Busca e instala mods, modpacks, shaders e resource packs usando a API pública do Modrinth.
 
-Welcome to the Modrinth Monorepo, the primary codebase for the Modrinth web interface and app. It contains ![Lines of code](https://img.shields.io/endpoint?url=https://loctopus.creeperkatze.dev/github/modrinth/code/badge%3Fformat%3Dhuman&logoColor=white&color=black&label=) lines of code and has ![Contributors](https://img.shields.io/github/contributors/Modrinth/code?color=black&label=) contributors!
+A ideia para depois é ter um botão "Exportar para celular", que gera um .mrpack leve para quem joga no Pojav.
 
-If you're not a developer and you've stumbled upon this repository, you can access the web interface on the [Modrinth website](https://modrinth.com) and download the latest release of the app [here](https://modrinth.com/app).
+## Como rodar
 
-## Development
+Precisa ter instalado o Node.js 24, o pnpm, o Rust e os [pré-requisitos do Tauri](https://v2.tauri.app/start/prerequisites/).
 
-This repository contains two primary packages. For detailed development information, please refer to their respective guides:
+```bash
+cp packages/app-lib/.env.prod packages/app-lib/.env
+pnpm install
+pnpm app:dev
+```
 
-- [Website frontend](https://docs.modrinth.com/contributing/knossos/)
-- [Desktop app](https://docs.modrinth.com/contributing/theseus/)
+O app abre em modo de desenvolvimento e recarrega sozinho quando você muda o código. Para gerar o instalador, use `pnpm app:build`.
 
-## Contributing
+O código do launcher fica em `apps/app` (Tauri), `apps/app-frontend` (interface em Vue) e `packages/app-lib` (Rust).
 
-We welcome contributions! Before submitting any contributions, please read our [contributing guidelines](https://docs.modrinth.com/contributing/getting-started/).
+## Créditos
 
-If you plan to fork this repository for your own purposes, please review our [copying guidelines](COPYING.md).
+Mantido por [euzane](https://github.com/euzane) e [joaoooomartins](https://github.com/joaoooomartins).
 
-## Security
+O Voxelith é um fork do código aberto do Modrinth App e não tem ligação com a Rinth, Inc. Veja o [COPYING.md](COPYING.md) para as regras de uso de marca.
 
-If you discover a security vulnerability within our codebase, please follow our [responsible disclosure guidelines](https://modrinth.com/legal/security).
+## Licença
 
-## Support
-
-If you need help with the Modrinth web interface or app, please visit our [support page](https://support.modrinth.com). For general inquiries, you can also join our [Discord server](https://discord.modrinth.com).
-
-## License
-
-All packages in this repository are licensed under their respective licenses. Refer to the LICENSE file in each package for more information.
+Cada pacote mantém a própria licença (veja o arquivo LICENSE dentro de cada um). O launcher é distribuído sob a GPLv3.
