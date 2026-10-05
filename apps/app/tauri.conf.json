@@ -9,7 +9,8 @@
 	"bundle": {
 		"active": true,
 		"category": "Game",
-		"copyright": "",
+		"copyright": "Copyright (C) 2026 euzane e joaoooomartins. Baseado no Modrinth App, licenciado sob a GPLv3.",
+		"publisher": "euzane e joaoooomartins",
 		"targets": "all",
 		"externalBin": [],
 		"icon": ["icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
@@ -19,7 +20,7 @@
 				"installerHooks": "./nsis/hooks.nsi"
 			}
 		},
-		"longDescription": "",
+		"longDescription": "Launcher de Minecraft leve para PC, com busca e instalação de mods, modpacks, shaders e resource packs.",
 		"macOS": {
 			"entitlements": "App.entitlements",
 			"exceptionDomain": "",
@@ -42,7 +43,7 @@
 				}
 			}
 		},
-		"shortDescription": "",
+		"shortDescription": "Launcher de Minecraft leve para PC",
 		"linux": {
 			"deb": {
 				"depends": []
@@ -55,10 +56,10 @@
 			}
 		]
 	},
-	"productName": "Modrinth App",
+	"productName": "Voxelith",
 	"version": "../app-frontend/package.json",
-	"mainBinaryName": "Modrinth App",
-	"identifier": "ModrinthApp",
+	"mainBinaryName": "Voxelith",
+	"identifier": "Voxelith",
 	"plugins": {
 		"deep-link": {
 			"desktop": {
@@ -77,7 +78,7 @@
 				"fullscreen": false,
 				"height": 800,
 				"resizable": true,
-				"title": "Modrinth App",
+				"title": "Voxelith",
 				"label": "main",
 				"width": 1280,
 				"minHeight": 700,

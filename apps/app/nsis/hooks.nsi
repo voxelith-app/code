@@ -36,7 +36,7 @@ Var /GLOBAL OldInstallDir
         UserInfo::GetAccountType
         Pop $0
         ${If} $0 != "Admin"
-            MessageBox MB_ICONINFORMATION|MB_OK "An old installation of the Modrinth App was detected that requires administrator permission to update from. You will be prompted with an admin prompt shortly."
+            MessageBox MB_ICONINFORMATION|MB_OK "Foi encontrada uma instalação antiga do Voxelith que precisa de permissão de administrador para ser atualizada. Em seguida vai aparecer o pedido de permissão."
         ${EndIf}
 
         ReadRegStr $4 SHCTX "${MANUPRODUCTKEY}" ""
@@ -50,7 +50,7 @@ Var /GLOBAL OldInstallDir
         !insertmacro ShellExecWait "runas" '$R1' '/P _?=$4' "" ${SW_SHOW} $3
         ${If} $3 <> 0
             SetErrorLevel $3
-            MessageBox MB_ICONEXCLAMATION|MB_OK "Failed to uninstall old global installation"
+            MessageBox MB_ICONEXCLAMATION|MB_OK "Não foi possível desinstalar a instalação antiga"
             Abort
         ${EndIf}
     ${EndIf}
