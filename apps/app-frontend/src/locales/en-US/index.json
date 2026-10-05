@@ -3495,7 +3495,7 @@
     "message": "Press <shortcut>N</shortcut> to quick create an instance"
   },
   "app.welcome-screen.title": {
-    "message": "Welcome to Modrinth"
+    "message": "Welcome to Voxelith"
   },
   "app.world.server-modal.placeholder-address": {
     "message": "example.modrinth.gg"
