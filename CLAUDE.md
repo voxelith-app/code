@@ -36,8 +36,12 @@ Launcher de Minecraft leve e otimizado para PC, feito para o dono e os amigos. �
 - Commits pequenos, um por etapa, com mensagem em português.
 
 ## Pendências para o PC
-- Ícones do app: rodar `pnpm tauri icon branding/voxelith-icon.png` (dentro de apps/app, ou `pnpm --filter @modrinth/app tauri icon ../../branding/voxelith-icon.png` da raiz) para gerar os ícones do instalador em apps/app/icons.
-- A imagem de fundo do DMG (apps/app/dmg/dmg-background.png) ainda é a do Modrinth. Trocar por uma do Voxelith.
+- Ícones do app: dentro de apps/app, rodar `pnpm tauri icon ../../branding/voxelith-icon.png` para gerar os ícones do instalador em apps/app/icons (os atuais ainda são do Modrinth).
+- Faltam os SVGs em /branding (voxelith-logo.svg e voxelith-icon.svg). Só os PNGs foram adicionados.
+- Testar no PC: `pnpm install` e `pnpm app:dev`. Conferir barra superior, tela de carregamento e tela de boas-vindas com o logo novo, nos temas claro e escuro; botão Jogar e destaques em ciano; app abrindo em pt-BR numa instalação nova; login da Microsoft; `pnpm prepr:frontend:app` e `pnpm prepr:frontend:lib` sem erro; `cargo check -p theseus_gui`.
+- Atualizador: tauri-release.conf.json aponta para releases do voxelith-app/code, mas a chave pública ainda é a do Modrinth. Gerar uma com `pnpm tauri signer generate` antes de publicar release. O signCommand (DigiCert) também é do Modrinth.
+- Imagem de fundo do DMG (apps/app/dmg/dmg-background.png) ainda é do Modrinth.
+- ErrorModal.vue e minecraft-auth-errors.ts têm texto fixo em inglês (fora do i18n). Converter para mensagens traduzíveis.
 
 ## Tarefa 1: repositório code
 1. Reescrever o README.md em português para o Voxelith, sem badges, capa nem links do Modrinth, usando o logo de /branding e com os donos nos créditos.
@@ -75,3 +79,7 @@ Ao terminar, dar um resumo curto do que foi feito e do que ficou pendente.
 
 ## Decisões
 - 2026-10-05: contexto inicial do projeto registrado neste arquivo.
+- 2026-10-05: identificador do app é `Voxelith` (pasta de dados separada do Modrinth App). Binário no Linux: `voxelith`.
+- 2026-10-05: esquema de deep link `modrinth://` e o tipo `.mrpack` foram mantidos para continuar abrindo links e modpacks do site do Modrinth.
+- 2026-10-05: tema claro usa ciano escuro (#0098B8) como cor de marca e #007D99 para links; tema escuro usa #3DE0FF.
+- 2026-10-05: botões de ação principal (Jogar, Instalar, Salvar, Reparar) usam a cor da marca. Verde ficou só para estado.
