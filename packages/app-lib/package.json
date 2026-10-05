@@ -1,5 +1,9 @@
 {
 	"name": "@modrinth/app-lib",
+	"contributors": [
+		"euzane (https://github.com/euzane)",
+		"joaoooomartins (https://github.com/joaoooomartins)"
+	],
 	"scripts": {
 		"build": "cargo build --release",
 		"lint": "cargo fmt --check && cargo clippy --all-targets",

@@ -1,5 +1,9 @@
 {
 	"name": "@modrinth/monorepo",
+	"contributors": [
+		"euzane (https://github.com/euzane)",
+		"joaoooomartins (https://github.com/joaoooomartins)"
+	],
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {

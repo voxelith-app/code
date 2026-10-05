@@ -1,5 +1,9 @@
 {
 	"name": "@modrinth/app",
+	"contributors": [
+		"euzane (https://github.com/euzane)",
+		"joaoooomartins (https://github.com/joaoooomartins)"
+	],
 	"scripts": {
 		"tauri": "tauri",
 		"build": "tauri build",

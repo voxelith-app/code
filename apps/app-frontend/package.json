@@ -1,5 +1,9 @@
 {
 	"name": "@modrinth/app-frontend",
+	"contributors": [
+		"euzane (https://github.com/euzane)",
+		"joaoooomartins (https://github.com/joaoooomartins)"
+	],
 	"private": true,
 	"version": "1.0.0-local",
 	"type": "module",

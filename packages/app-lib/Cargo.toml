@@ -3,6 +3,7 @@ name = "theseus"
 # The actual version is set by the theseus-build workflow on tagging
 version = "1.0.0-local"
 edition.workspace = true
+authors.workspace = true
 
 [[bin]]
 name = "export_app_events"
