@@ -41,7 +41,6 @@ Launcher de Minecraft leve e otimizado para PC, feito para o dono e os amigos. �
 - Testar no PC: `pnpm install` e `pnpm app:dev`. Conferir barra superior, tela de carregamento e tela de boas-vindas com o logo novo, nos temas claro e escuro; botão Jogar e destaques em ciano; app abrindo em pt-BR numa instalação nova; login da Microsoft; `pnpm prepr:frontend:app` e `pnpm prepr:frontend:lib` sem erro; `cargo check -p theseus_gui`.
 - Atualizador: tauri-release.conf.json aponta para releases do voxelith-app/code, mas a chave pública ainda é a do Modrinth. Gerar uma com `pnpm tauri signer generate` antes de publicar release. O signCommand (DigiCert) também é do Modrinth.
 - Imagem de fundo do DMG (apps/app/dmg/dmg-background.png) ainda é do Modrinth.
-- Testar "Exportar para celular" (menu ⋮ da instância): o modal deve abrir com o nome "<instância> (celular)", shaderpacks e mods Iris/Oculus/Distant Horizons desmarcados, e o .mrpack gerado deve importar no Voxelith Launcher do celular.
 - ErrorModal.vue e minecraft-auth-errors.ts têm texto fixo em inglês (fora do i18n). Converter para mensagens traduzíveis.
 
 ## Tarefa 1: repositório code
@@ -87,4 +86,3 @@ Ao terminar, dar um resumo curto do que foi feito e do que ficou pendente.
 - 2026-10-06: Tarefa 3 iniciada. Repositório oficial do Mojo Launcher: github.com/MojoLauncher/MojoLauncher (branch padrão v3_openjdk, LGPL-3.0, já importa .mrpack). Fork só depois da confirmação do dono.
 - 2026-10-06: fork do celular criado em voxelith-app/VoxelithLauncher. O contexto dele fica no CLAUDE.md daquele repositório.
 - 2026-10-06: iOS adiado. Base seria AngelAuraMC/Amethyst-iOS (GPL-3.0, Objective-C/Swift, IPA pelo GitHub Actions, instalação por SideStore/AltStore com JIT). Fork só quando o dono pedir.
-- 2026-10-06: "Exportar para celular" reaproveita a exportação de .mrpack que já existia. Só muda o que vem marcado: tira shaderpacks e mods pesados para celular (Iris, Oculus, Distant Horizons, Physics Mod). As otimizações ficam por conta do botão Otimizar no app do celular.
