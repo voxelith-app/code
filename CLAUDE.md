@@ -84,3 +84,4 @@ Ao terminar, dar um resumo curto do que foi feito e do que ficou pendente.
 - 2026-10-05: tema claro usa ciano escuro (#0098B8) como cor de marca e #007D99 para links; tema escuro usa #3DE0FF.
 - 2026-10-05: botões de ação principal (Jogar, Instalar, Salvar, Reparar) usam a cor da marca. Verde ficou só para estado.
 - 2026-10-06: Tarefa 3 iniciada. Repositório oficial do Mojo Launcher: github.com/MojoLauncher/MojoLauncher (branch padrão v3_openjdk, LGPL-3.0, já importa .mrpack). Fork só depois da confirmação do dono.
+- 2026-10-06: fork do celular criado em voxelith-app/VoxelithLauncher. O contexto dele fica no CLAUDE.md daquele repositório.
