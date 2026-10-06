@@ -86,3 +86,4 @@ Ao terminar, dar um resumo curto do que foi feito e do que ficou pendente.
 - 2026-10-06: Tarefa 3 iniciada. Repositório oficial do Mojo Launcher: github.com/MojoLauncher/MojoLauncher (branch padrão v3_openjdk, LGPL-3.0, já importa .mrpack). Fork só depois da confirmação do dono.
 - 2026-10-06: fork do celular criado em voxelith-app/VoxelithLauncher. O contexto dele fica no CLAUDE.md daquele repositório.
 - 2026-10-06: iOS adiado. Base seria AngelAuraMC/Amethyst-iOS (GPL-3.0, Objective-C/Swift, IPA pelo GitHub Actions, instalação por SideStore/AltStore com JIT). Fork só quando o dono pedir.
+- 2026-10-06: não mexer na exportação de .mrpack do launcher de PC. O "Exportar para celular" foi desfeito a pedido do dono.
