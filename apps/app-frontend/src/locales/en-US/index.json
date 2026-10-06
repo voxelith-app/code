@@ -404,15 +404,6 @@
   "app.export-modal.header": {
     "message": "Export modpack"
   },
-  "app.export-modal.mobile-header": {
-    "message": "Export for mobile"
-  },
-  "app.export-modal.mobile-hint": {
-    "message": "Shaders and mods that usually do not work on phones (Iris, Oculus, Distant Horizons) are left out. On the phone, import the file in Voxelith Launcher and tap Optimize."
-  },
-  "app.export-modal.mobile-name-suffix": {
-    "message": "(mobile)"
-  },
   "app.export-modal.modpack-name-label": {
     "message": "Modpack name"
   },
@@ -3667,9 +3658,6 @@
   },
   "instance.action.create-shortcut": {
     "message": "Create shortcut"
-  },
-  "instance.action.export-mobile": {
-    "message": "Export for mobile"
   },
   "instance.action.export-modpack": {
     "message": "Export modpack"

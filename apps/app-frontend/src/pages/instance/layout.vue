@@ -50,7 +50,6 @@
 				@settings="() => settingsModal?.show()"
 				@open-folder="() => instance && showInstanceInFolder(instance.id)"
 				@export="() => !instance?.quarantined && exportModal?.show()"
-				@export-mobile="() => !instance?.quarantined && exportModal?.show({ mobile: true })"
 				@create-shortcut="() => createShortcut()"
 				@report="reportSharedInstance"
 			/>

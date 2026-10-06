@@ -13,7 +13,7 @@ import {
 	useVIntl,
 } from '@modrinth/ui'
 import { save } from '@tauri-apps/plugin-dialog'
-import { computed, ref, shallowRef } from 'vue'
+import { ref, shallowRef } from 'vue'
 
 import { PackageIcon } from '@/assets/icons'
 import { export_instance_mrpack, get_pack_export_candidates } from '@/helpers/instance'
@@ -25,13 +25,6 @@ const { formatMessage } = useVIntl()
 
 const messages = defineMessages({
 	header: { id: 'app.export-modal.header', defaultMessage: 'Export modpack' },
-	mobileHeader: { id: 'app.export-modal.mobile-header', defaultMessage: 'Export for mobile' },
-	mobileHint: {
-		id: 'app.export-modal.mobile-hint',
-		defaultMessage:
-			'Shaders and mods that usually do not work on phones (Iris, Oculus, Distant Horizons) are left out. On the phone, import the file in Voxelith Launcher and tap Optimize.',
-	},
-	mobileNameSuffix: { id: 'app.export-modal.mobile-name-suffix', defaultMessage: '(mobile)' },
 	modpackNameLabel: { id: 'app.export-modal.modpack-name-label', defaultMessage: 'Modpack name' },
 	modpackNamePlaceholder: {
 		id: 'app.export-modal.modpack-name-placeholder',
@@ -67,13 +60,8 @@ const props = defineProps({
 	},
 })
 
-/** Mods that are heavy or crash on Android launchers, matched by file name. */
-const MOBILE_EXCLUDED_MODS = /^(iris|oculus|distant[-_ ]?horizons|physics[-_ ]?mod)/i
-const MOBILE_EXCLUDED_FOLDERS = ['shaderpacks']
-
 defineExpose({
-	show: (options = {}) => {
-		mobile.value = options.mobile === true
+	show: () => {
 		resetExportState()
 		exportModal.value.show()
 		void initFiles().catch(handleError)
@@ -81,8 +69,6 @@ defineExpose({
 })
 
 const exportModal = ref(null)
-const mobile = ref(false)
-const header = computed(() => formatMessage(mobile.value ? messages.mobileHeader : messages.header))
 const nameInput = ref(props.instance.name)
 const exportDescription = ref('')
 const versionInput = ref('1.0.0')
@@ -105,24 +91,6 @@ async function initFiles() {
 	includedFilePaths.value = files.value
 		.filter((file) => !file.disabled && file.defaultSelected)
 		.map((file) => file.path)
-	if (mobile.value) await applyMobileDefaults(loadId)
-}
-
-async function applyMobileDefaults(loadId) {
-	includedFilePaths.value = includedFilePaths.value.filter(
-		(path) => !MOBILE_EXCLUDED_FOLDERS.includes(path),
-	)
-	const excluded = [...MOBILE_EXCLUDED_FOLDERS]
-	if (files.value.some((file) => file.path === 'mods')) {
-		const mods = await get_pack_export_candidates(props.instance.id, 'mods')
-		if (loadId !== filesLoadId.value) return
-		directoryEntries.set('mods', mods)
-		for (const mod of mods) {
-			if (MOBILE_EXCLUDED_MODS.test(mod.path.split('/').pop() ?? '')) excluded.push(mod.path)
-		}
-	}
-	excludedFilePaths.value = excluded
-	fileTreeKey.value += 1
 }
 
 const exportPack = async () => {
@@ -170,9 +138,7 @@ const exportPack = async () => {
 }
 
 function resetExportState() {
-	nameInput.value = mobile.value
-		? `${props.instance.name} ${formatMessage(messages.mobileNameSuffix)}`
-		: props.instance.name
+	nameInput.value = props.instance.name
 	exportDescription.value = ''
 	versionInput.value = '1.0.0'
 	files.value = []
@@ -220,13 +186,12 @@ function normalizeExportPath(path) {
 <template>
 	<NewModal
 		ref="exportModal"
-		:header="header"
+		:header="formatMessage(messages.header)"
 		scrollable
 		width="46rem"
 		max-width="calc(100vw - 2rem)"
 	>
 		<div class="flex flex-col gap-4">
-			<p v-if="mobile" class="m-0 text-secondary">{{ formatMessage(messages.mobileHint) }}</p>
 			<div class="grid grid-cols-2 gap-4">
 				<div class="labeled_input w-full">
 					<p class="text-contrast font-semibold">{{ formatMessage(messages.modpackNameLabel) }}</p>

@@ -175,7 +175,6 @@ import {
 	ExternalIcon,
 	FolderOpenIcon,
 	LockIcon,
-	MonitorSmartphoneIcon,
 	MoreVerticalIcon,
 	PackageIcon,
 	PlayIcon,
@@ -216,10 +215,6 @@ const messages = defineMessages({
 	exportModpack: {
 		id: 'instance.action.export-modpack',
 		defaultMessage: 'Export modpack',
-	},
-	exportMobile: {
-		id: 'instance.action.export-mobile',
-		defaultMessage: 'Export for mobile',
 	},
 	instanceSettings: {
 		id: 'instance.action.settings',
@@ -311,7 +306,6 @@ const emit = defineEmits<{
 	settings: []
 	openFolder: []
 	export: []
-	exportMobile: []
 	createShortcut: []
 	report: [event?: MouseEvent]
 }>()
@@ -381,12 +375,6 @@ const moreActions = computed<ButtonMenuOption[]>(() => {
 				label: formatMessage(messages.exportModpack),
 				icon: PackageIcon,
 				action: () => emit('export'),
-			},
-			{
-				id: 'export-mobile',
-				label: formatMessage(messages.exportMobile),
-				icon: MonitorSmartphoneIcon,
-				action: () => emit('exportMobile'),
 			},
 			{
 				id: 'create-shortcut',
